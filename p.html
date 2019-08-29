@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Get Selected Option Text</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".country").change(function(){
+        if(this.value == "maha"){
+            $("#p").show();
+            $("#q").hide()
+        }
+        else{
+            $("#p").hide()
+            $("#q").show()
+        }
+    })
+})
+</script>
+</head> 
+<body>
+    <form>
+        <label>Select Country:</label>
+        <select class="country">
+            <option>--Select Country--</option>
+            <option class="maha" value="maha">Maharastra</option>
+            <option>Kerla</option>
+        </select>
+        <br><br>
+        <br><label>Select Country:</label>
+        <select name="" id="p" hidden>
+            <option>Chalisgaon</option>
+            <option>Nagar</option>
+            <option>Alandi</option>
+        </select>
+
+        <select name="" id="q" hidden>
+            <option>Kanpur</option>
+            <option>kollam</option>
+            <option>Kanpur</option>
+        </select>
+    </form>
+</body>
+</html>                            
