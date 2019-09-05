@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    
+    .bgimg {
+        background-image: url(lo.jpeg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+    
+    .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+    
+    .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+    }
+    
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    hr {
+        margin: auto;
+        width: 40%;
+    }
+    
+    #date {
+        font-size: 40px;
+        color: black;
+    }
+    
+    #p,
+    #a {
+        border: 2px solid black;
+        font-size: 30px;
+        width: 80px;
+        color: black;
+        background: white;
+    }
+    
+    #v {
+        border: 2px solid black;
+        font-size: 30px;
+        width: 100px;
+        color: #FF1493;
+        background: white;
+        text-size-adjust: 60px;
+    }
+    
+    .da {
+        display: inline-flex;
+    }
+</style>
+
+<body onload="startTime()">
+
+    <div class="bgimg">
+
+        <div class="middle">
+            <h1>Todays Time</h1>
+            <hr>
+            <p id="date"></p>
+            <div class="da">
+                <p id="p" style=""></p>
+                <p hidden>asdf</p>
+                <p id="a"></p>
+                <p id="v"></p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('p').innerHTML = h;
+            document.getElementById('a').innerHTML = m;
+            document.getElementById('v').innerHTML = s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            };
+            return i;
+        }
+    </script>
+
+</body>
+
+</html>
