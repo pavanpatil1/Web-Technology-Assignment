@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find My College</title>
+</head>
+
+<style>
+    body {
+        background-color: #e6e6e6;
+    }
+    
+    .cont {
+        box-shadow: 0px 20px 20px black;
+        width: 560px;
+        margin-left: 500px;
+        height: 640px;
+        margin-top: 20px;
+        border-radius: 20px;
+        background: white;
+    }
+    
+    .image {
+        background-image: url("bg-01.jpg");
+        border-radius: 10px;
+        width: 560px;
+        height: 200px;
+        ;
+        background-color: black;
+    }
+    
+    .image h4 {
+        font-size: 30px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .image span {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .form {
+        padding-left: 80px;
+    }
+    
+    label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    input {
+        width: 50%;
+        padding: 12px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    select {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    button {
+        background-color: #0c71c3;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+
+<body>
+
+    <div class="cont">
+        <div class="image" id="overlay">
+            <br>
+            <center>
+                <h4>Find Your College</h4>
+            </center>
+            <center><span>Find your Favorite college at findmycolege</span></center>
+        </div><br><br>
+        <div class="form">
+            <form onsubmit="return validateForm();">
+                <label for="">Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="name" id="name" placeholder="Enter your name"><br><br>
+                <label for="">Surname:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="college name" id="surname" placeholder="Enter your Surname Name"><br> <br>
+                <label for="">College:</label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="college name" id="college" placeholder="Enter your College Name"><br> <br>
+                <label for="">City:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="college name" id="city" placeholder="Enter your City Name"><br> <br>
+                <label for="">Country:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="college name" id="country" placeholder="Enter your Country Name"><br> <br>
+                <br>
+                <button>Submit</button>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                alert("Please Enter your name");
+            }
+            var surname = document.getElementById("surname").value;
+            if (name == "") {
+                alert("Please Enter your Surname");
+            }
+            var college = document.getElementById("college").value;
+            if (college == "") {
+                alert("Please Enter College name");
+            }
+            var city = document.getElementById("city").value;
+            if (city == "") {
+                alert("Please Enter City name");
+            }
+            var country = document.getElementById("country").value;
+            if (country == "") {
+                alert("Please Enter your Country name");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
