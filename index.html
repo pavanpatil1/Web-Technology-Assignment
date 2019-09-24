@@ -1,93 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>N-Anime</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+</head>
+
 <style>
+    
+.nav{
+    display: inline-flex;
+    position: absolute;
+}
+ul{
+    list-style: none;
+    position: absolute;
+}
+li{
+    display: inline-flex;
+}
+li{
+    margin-left: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 
-header{
-width:100%;
-height:20%;
-font:Georgia;
-color: white;
-Background:black;
 }
 
+.logo{
+    margin-left: 10px;
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 40px;
+}
+.h{
+    margin-left: 750px;
+    margin-top: 0px;
+}
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.right{
+    margin-left: 1490px;
+    margin-top: 17px;
+}
+
+.main{
+    margin-top: 90px;
+    position: absolute;
+}
+.search{
+    margin-left: 210px;
+    margin-top: 200px;
+    width: 400px;
+    position: absolute;
+}
+.search input[type=text]{
+    margin: 10px;
+    padding: 9px;
+    width: 250px;
+    position: absolute;
+}
+::placeholder{
+    font-family: 'Saira Stencil One', cursive;
+}
+
+.search button{
+     margin: 20px;
+    padding: 11px;
+    width: 100px;
+    margin-left: 280px;
+    margin-top: 10px;
+    background: #694ba1;
+    border: #694ba1;
+    color: #fff;
+}
+
+.image{
+    margin-left: 1070px;
+    position: absolute;
+    margin-top: 0px;
+}
 .footer{
-width:100%;
-height:20%;
-font:Georgia;
-color: white;
-Background:black;
+    margin-top: 720px;
+    margin-left: 490px;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
 }
+.footer a{
+    text-decoration: none;
 
-
-h3{font:Georgia;
-color: #0F52BA;}
-input[type=text], select {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
 }
-
-input[type=submit] {
-  width: 10%;
-  background-color:red;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-label
-{font:Arial;}
 </style>
+
 <body>
 
-<header>
-<marquee><h2>Welcome To Online Hospital System</h2></marquee>
-</header>
-<br><br>
-<center><h2>Enter Your Detail<h2></center>
+    <!-- nav Section Started Here -->
+<div class="header">
+    <div class="nav">
+        <ul>
+            <li class="logo">N-Anime</li>
+            
+            <li class="h">Genere</li>
+            <li class="i">Types</li>
+        </ul>
+        <div class="right">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">Films</a>
+              <a href="#">Services</a>
+              <a href="#">Clients</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+    </div>
+</div>  
 
-<div><br><br>
-<center>
-  <form action="/action_page.php">
-    <label for="fname">First Name &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+<!-- Nav Section Completed Here -->
 
-    <label for="lname">Last Name &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
-     <label for="age">Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;      </label>
-    <input type="text" id="lname" name="lastname" placeholder="Your age.."><br>
 
-    <label for="country">Choose Hospital</label>
-    <select id="country" name="country">
-      <option value="australia">Aai Hospital</option>
-      <option value="canada">YP Patil Hospital</option>
-      <option value="usa">Deore Hospital</option>
-    </select>
-     <br><br><br><br>
-    <input type="submit" value="Submit">
-  </form>
-</center>
+
+<!-- Main Section Started Here -->
+<div class="main">
+    <div class="search">
+
+        <input type="text" name="search" placeholder="Search for Anime Name"><button>Search</button>
+    </div>
+    <div class="image">
+        <img src="an.jpg" alt="" width="460px;" height="610px;">
+    </div>
 </div>
-<><><br><br>
+
+
+<!-- Main Section Completed Here -->
+
+
+<!-- Here the Footer Section is Begins -->
+
 <div class="footer">
-<footer><center>Design And Develop By :- Pavan Bhalchandra Patil</center></footer>
+    <footer>
+        <span>Design and Develop by  <a href="http://tpcorporation.epizy.com">ppcorporation</a></span>
+    </footer>
 </div>
+
+
+<!-- Footer Completed Here -->
+
+
+
+
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+         
 </body>
 </html>
